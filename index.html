@@ -24,7 +24,13 @@
             }
             createTriangle(result);
            
-           function f (a = 2, b = 3, c) {
+           function f (a, b, c) {
+               if (typeof a === 'undefined' ) {
+                   a = 2;
+               }
+               if (typeof b === 'undefined' ) {
+                   b = 3;
+               }
                if ( typeof c === 'function' ) {
                   return c(a, b);
                } else {
